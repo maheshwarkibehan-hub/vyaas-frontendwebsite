@@ -2,6 +2,10 @@ from dotenv import load_dotenv
 from livekit import agents
 from livekit.agents import AgentSession, Agent, RoomInputOptions, ChatContext, ChatMessage
 from livekit.plugins import google, noise_cancellation
+import asyncio
+import os
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from threading import Thread
 
 # Import your custom modules
 from vyaas_prompts import instructions_prompt, Reply_prompts
@@ -53,8 +57,29 @@ async def entrypoint(ctx: agents.JobContext):
     await conv_ctx.run(current_ctx)
     
 
+# Health Check Server for Render
+class HealthHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
+        self.end_headers()
+        self.wfile.write(b'{"status": "ok", "service": "VYAAS AI Agent"}')
+    
+    def log_message(self, format, *args):
+        pass  # Suppress logs
+
+def start_health_server():
+    port = int(os.getenv('PORT', 10000))
+    server = HTTPServer(('0.0.0.0', port), HealthHandler)
+    print(f"Health server running on port {port}")
+    server.serve_forever()
 
 if __name__ == "__main__":
+    # Start health check server in background thread
+    health_thread = Thread(target=start_health_server, daemon=True)
+    health_thread.start()
+    
+    # Start LiveKit agent
     agents.cli.run_app(agents.WorkerOptions(entrypoint_fnc=entrypoint))
 
     
