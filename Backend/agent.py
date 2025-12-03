@@ -28,7 +28,7 @@ class Assistant(Agent):
 
 async def entrypoint(ctx: agents.JobContext):
     session = AgentSession(
-        preemptive_generation=True
+        preemptive_generation=False
     )
     
     #getting the current memory chat
