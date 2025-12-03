@@ -1,0 +1,31 @@
+{
+    "appId": "com.vyaasai.app",
+    "appName": "VYAAS AI",
+    "webDir": "out",
+    "server": {
+        "androidScheme": "https",
+        "cleartext": true,
+        "hostname": "localhost"
+    },
+    "plugins": {
+        "SplashScreen": {
+            "launchShowDuration": 2000,
+            "backgroundColor": "#0a0a0a",
+            "showSpinner": true,
+            "spinnerColor": "#7e22ce",
+            "androidScaleType": "CENTER_CROP"
+        },
+        "StatusBar": {
+            "style": "DARK",
+            "backgroundColor": "#0a0a0a"
+        }
+    },
+    "android": {
+        "buildOptions": {
+            "keystorePath": "",
+            "keystorePassword": "",
+            "keystoreAlias": "",
+            "keystoreAliasPassword": ""
+        }
+    }
+}

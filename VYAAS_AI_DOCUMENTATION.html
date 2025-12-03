@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VYAAS AI - Complete Documentation | पूरी जानकारी</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0f;
+            color: #ffffff;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 20px 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav .nav-links a:hover {
+            color: #8b5cf6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.2), transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 50%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+            border-radius: 20px;
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            box-shadow: 0 30px 80px rgba(139, 92, 246, 0.3);
+        }
+
+        /* Section Styles */
+        section {
+            margin: 100px 0;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #60a5fa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: #60a5fa;
+            margin: 40px 0 20px;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            color: #8b5cf6;
+            margin: 30px 0 15px;
+        }
+
+        p {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(139, 92, 246, 0.5);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 15px 0 15px 40px;
+            position: relative;
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Tech Stack */
+        .tech-badge {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 50px;
+            margin: 5px;
+            font-size: 0.95rem;
+            color: #a78bfa;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            color: #10b981;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Highlight Box */
+        .highlight {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border-left: 4px solid #10b981;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .warning {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%);
+            border-left: 4px solid #f59e0b;
+        }
+
+        /* Images */
+        .doc-image {
+            width: 100%;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
+        }
+
+        /* Emoji */
+        .emoji {
+            font-size: 2.5rem;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+
+        table th,
+        table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        table th {
+            background: rgba(139, 92, 246, 0.1);
+            color: #8b5cf6;
+            font-weight: 600;
+        }
+
+        table td {
+            color: #cbd5e1;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .tab {
+            padding: 15px 30px;
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab.active {
+            color: #8b5cf6;
+            border-bottom-color: #8b5cf6;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            margin-top: 100px;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        footer p {
+            color: #64748b;
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            nav .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">🚀 VYAAS AI</div>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#updates">Updates</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <h1>VYAAS AI</h1>
+            <p class="tagline">🇮🇳 India ka Apna Advanced AI Assistant | भारत का अपना एडवांस्ड AI असिस्टेंट</p>
+            <img src="vyaas_ai_hero_1763839638972.png" alt="VYAAS AI Hero" class="hero-image">
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Overview Section -->
+        <section id="overview">
+            <h2><span class="emoji">📖</span> VYAAS AI Kya Hai? | What is VYAAS AI?</h2>
+
+            <div class="card">
+                <p><strong>VYAAS AI</strong> ek complete, production-ready AI assistant platform hai jo <strong>voice
+                        interaction</strong>, <strong>real-time analytics</strong>, aur <strong>enterprise-level
+                        security</strong> provide karta hai. Yeh specially Indian users ke liye design kiya gaya hai
+                    with <strong>Hinglish support</strong>.</p>
+
+                <div class="highlight">
+                    <strong>🎯 Main Goal:</strong> Ek aisa AI assistant banana jo Indian context mein naturally baat kar
+                    sake, real-time information de sake, aur businesses ko powerful admin tools provide kare.
+                </div>
+
+                <h3>🌟 Kyu Bana VYAAS AI?</h3>
+                <ul class="feature-list">
+                    <li><strong>Hinglish Support:</strong> Pure English ya Hindi nahi, natural Hinglish mein
+                        conversation</li>
+                    <li><strong>Indian Context:</strong> Weather, news, aur information Indian cities ke liye optimized
+                    </li>
+                    <li><strong>Complete Platform:</strong> Sirf chatbot nahi, ek full business solution with analytics,
+                        user management, payments</li>
+                    <li><strong>Voice-First:</strong> Text ke saath-saath natural voice interaction</li>
+                    <li><strong>Monetization Ready:</strong> Built-in credit system, subscription plans, aur payment
+                        tracking</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <h2><span class="emoji">✨</span> Features | फीचर्स</h2>
+
+            <img src="features_showcase_1763839676594.png" alt="Features Showcase" class="doc-image">
+
+            <div class="grid-2">
+                <!-- Voice AI -->
+                <div class="card">
+                    <h3>🗣️ Advanced Voice AI (Jarvis)</h3>
+                    <p><strong>Technology:</strong> Google Gemini Realtime API + LiveKit</p>
+                    <ul class="feature-list">
+                        <li><strong>Natural Hinglish:</strong> "Aaj ka weather kaisa hai?" - aise naturally baat karo
+                        </li>
+                        <li><strong>Voice:</strong> "Charon" - Deep, calm, professional voice</li>
+                        <li><strong>Real-time:</strong> Zero latency, instant responses</li>
+                        <li><strong>Multi-modal:</strong> Voice + Text + Video support</li>
+                    </ul>
+
+                    <div class="highlight">
+                        <strong>💡 Example:</strong> "Bhai, Delhi mein aaj kitna pollution hai?" → Vyaas turant weather
+                        aur AQI data fetch karke batayega
+                    </div>
+                </div>
+
+                <!-- Admin Dashboard -->
+                <div class="card">
+                    <h3>⚡ Admin Dashboard</h3>
+                    <p><strong>Complete User Management System</strong></p>
+                    <ul class="feature-list">
+                        <li><strong>User Control:</strong> Block/Unblock users, force logout</li>
+                        <li><strong>Credit Management:</strong> Add/Remove credits with reasons</li>
+                        <li><strong>Activity Logs:</strong> Har user ki activity track karo</li>
+                        <li><strong>History Access:</strong> Users ke conversations dekho aur delete karo</li>
+                        <li><strong>Payment Approval:</strong> Manual payment requests approve/reject karo</li>
+                    </ul>
+                </div>
+
+                <!-- Analytics -->
+                <div class="card">
+                    <h3>📊 Analytics & Earnings</h3>
+                    <p><strong>Real-time Revenue Tracking</strong></p>
+                    <ul class="feature-list">
+                        <li><strong>Total Revenue:</strong> Kitna total kamaya</li>
+                        <li><strong>Monthly/Daily:</strong> Is mahine aur aaj kitna revenue</li>
+                        <li><strong>Transaction History:</strong> Har payment ka detailed record</li>
+                        <li><strong>User-wise Breakdown:</strong> Kon kitna pay kar raha hai</li>
+                    </ul>
+
+                    <div class="code-block">
+                        <pre>📈 Example Analytics:
+Total Revenue: ₹45,299
+Monthly Revenue: ₹12,500
+Daily Revenue: ₹850
+Total Transactions: 156</pre>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="card">
+                    <h3>🔒 Enterprise Security</h3>
+                    <p><strong>Bank-level Security Features</strong></p>
+                    <ul class="feature-list">
+                        <li><strong>Firebase Auth:</strong> Google Sign-in with verified emails</li>
+                        <li><strong>Session Guards:</strong> Har page pe session validation</li>
+                        <li><strong>Force Logout:</strong> Admin kisi bhi user ko instantly logout kar sakta hai</li>
+                        <li><strong>Server-side Timestamps:</strong> Users apna time change karke bypass nahi kar sakte
+                        </li>
+                        <li><strong>RLS Policies:</strong> Database level security with Row Level Security</li>
+                    </ul>
+                </div>
+
+                <!-- Daily Rewards -->
+                <div class="card">
+                    <h3>🎁 Daily Rewards System</h3>
+                    <p><strong>User Engagement & Retention</strong></p>
+                    <ul class="feature-list">
+                        <li><strong>Daily Login Bonus:</strong> Har din login karne pe credits</li>
+                        <li><strong>Streak System:</strong> Continuous login pe bonus multiply</li>
+                        <li><strong>Coupon Codes:</strong> VYAAS-XXXX format ke discount coupons</li>
+                        <li><strong>Gamification:</strong> Confetti animation, progress bars</li>
+                    </ul>
+
+                    <div class="highlight">
+                        <strong>🎯 Reward Structure:</strong>
+                        <br>Day 1-3: 10 credits
+                        <br>Day 4-6: 15 credits
+                        <br>Day 7+: 20 credits + Coupon (10-50% off)
+                    </div>
+                </div>
+
+                <!-- AI Tools -->
+                <div class="card">
+                    <h3>🛠️ AI Tools & Capabilities</h3>
+                    <p><strong>Real-time Information & Generation</strong></p>
+                    <ul class="feature-list">
+                        <li><strong>Google Search:</strong> Latest news, facts, information</li>
+                        <li><strong>Weather Updates:</strong> Real-time weather for any city</li>
+                        <li><strong>Image Generation:</strong> Hugging Face Flux model se images</li>
+                        <li><strong>Long-term Memory:</strong> Past conversations remember karta hai</li>
+                    </ul>
+
+                    <div class="code-block">
+                        <pre>🔧 Available Tools:
+1. google_search(query) → Latest info
+2. get_weather(city) → Temperature, humidity
+3. generate_image(prompt) → AI-generated images
+4. memory_recall() → Past conversation context</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech-stack">
+            <h2><span class="emoji">🛠️</span> Technology Stack | टेक्नोलॉजी स्टैक</h2>
+
+            <img src="tech_stack_diagram_1763839656550.png" alt="Tech Stack Diagram" class="doc-image">
+
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('frontend')">Frontend</button>
+                <button class="tab" onclick="switchTab('backend')">Backend</button>
+                <button class="tab" onclick="switchTab('database')">Database</button>
+                <button class="tab" onclick="switchTab('apis')">APIs & Services</button>
+            </div>
+
+            <div id="frontend" class="tab-content active">
+                <div class="card">
+                    <h3>🎨 Frontend Technologies</h3>
+
+                    <h4>Core Framework</h4>
+                    <div>
+                        <span class="tech-badge">Next.js 15.5.2</span>
+                        <span class="tech-badge">React 19</span>
+                        <span class="tech-badge">TypeScript 5</span>
+                        <span class="tech-badge">Tailwind CSS 4</span>
+                    </div>
+
+                    <h4>UI & Animation</h4>
+                    <div>
+                        <span class="tech-badge">Framer Motion</span>
+                        <span class="tech-badge">Radix UI</span>
+                        <span class="tech-badge">Lucide Icons</span>
+                        <span class="tech-badge">Sonner (Toasts)</span>
+                    </div>
+
+                    <h4>Real-time Communication</h4>
+                    <div>
+                        <span class="tech-badge">LiveKit Client SDK</span>
+                        <span class="tech-badge">LiveKit Components React</span>
+                    </div>
+
+                    <div class="highlight">
+                        <strong>🎯 Why Next.js?</strong>
+                        <ul class="feature-list">
+                            <li>Server-side rendering for better SEO</li>
+                            <li>API routes for backend logic</li>
+                            <li>Turbopack for lightning-fast development</li>
+                            <li>Built-in optimization for images, fonts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="backend" class="tab-content">
+                <div class="card">
+                    <h3>🐍 Backend Technologies</h3>
+
+                    <h4>Core</h4>
+                    <div>
+                        <span class="tech-badge">Python 3.10+</span>
+                        <span class="tech-badge">LiveKit Agents SDK</span>
+                        <span class="tech-badge">Google Gemini API</span>
+                    </div>
+
+                    <h4>AI & ML</h4>
+                    <div>
+                        <span class="tech-badge">Google Realtime API</span>
+                        <span class="tech-badge">Hugging Face (Image Gen)</span>
+                        <span class="tech-badge">OpenWeatherMap API</span>
+                        <span class="tech-badge">Google Custom Search</span>
+                    </div>
+
+                    <h4>Key Files</h4>
+                    <table>
+                        <tr>
+                            <th>File</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>agent.py</td>
+                            <td>Main entry point, LiveKit agent initialization</td>
+                        </tr>
+                        <tr>
+                            <td>vyaas_prompts.py</td>
+                            <td>AI persona, instructions, Hinglish tuning</td>
+                        </tr>
+                        <tr>
+                            <td>vyaas_google_search.py</td>
+                            <td>Real-time Google search tool</td>
+                        </tr>
+                        <tr>
+                            <td>vyaas_get_weather.py</td>
+                            <td>Weather data fetching (OpenWeatherMap)</td>
+                        </tr>
+                        <tr>
+                            <td>memory_store.py</td>
+                            <td>Long-term conversation memory</td>
+                        </tr>
+                    </table>
+
+                    <div class="code-block">
+                        <pre># Example: Adding a New Tool
+from livekit.agents import function_tool
+
+@function_tool()
+async def get_news(topic: str) -> str:
+    """Fetch latest news on a topic"""
+    # Your logic here
+    return "Latest news..."</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div id="database" class="tab-content">
+                <div class="card">
+                    <h3>🗄️ Database Architecture</h3>
+
+                    <h4>Platform</h4>
+                    <div>
+                        <span class="tech-badge">Supabase</span>
+                        <span class="tech-badge">PostgreSQL 15</span>
+                        <span class="tech-badge">Row Level Security (RLS)</span>
+                    </div>
+
+                    <h4>Database Tables</h4>
+                    <table>
+                        <tr>
+                            <th>Table</th>
+                            <th>Purpose</th>
+                            <th>Key Columns</th>
+                        </tr>
+                        <tr>
+                            <td>users</td>
+                            <td>User profiles & credits</td>
+                            <td>id, email, credits, plan_type, is_blocked</td>
+                        </tr>
+                        <tr>
+                            <td>chat_history</td>
+                            <td>Conversation storage</td>
+                            <td>user_id, messages, created_at</td>
+                        </tr>
+                        <tr>
+                            <td>transactions</td>
+                            <td>Payment records</td>
+                            <td>user_id, amount, plan_type, status</td>
+                        </tr>
+                        <tr>
+                            <td>daily_rewards</td>
+                            <td>Reward claims</td>
+                            <td>user_id, reward_value, streak_day</td>
+                        </tr>
+                        <tr>
+                            <td>user_sessions</td>
+                            <td>Session management</td>
+                            <td>user_id, invalidated_at, admin_id</td>
+                        </tr>
+                        <tr>
+                            <td>activity_logs</td>
+                            <td>User actions tracking</td>
+                            <td>user_id, action_type, details</td>
+                        </tr>
+                        <tr>
+                            <td>payment_requests</td>
+                            <td>Manual payment approvals</td>
+                            <td>user_id, amount, status</td>
+                        </tr>
+                    </table>
+
+                    <div class="highlight">
+                        <strong>🔒 Security Features:</strong>
+                        <ul class="feature-list">
+                            <li>RLS policies ensure users can only access their own data</li>
+                            <li>Admin-only tables for sensitive operations</li>
+                            <li>Server-side timestamp generation for security</li>
+                            <li>Encrypted connections (SSL/TLS)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="apis" class="tab-content">
+                <div class="card">
+                    <h3>🌐 External APIs & Services</h3>
+
+                    <div class="grid-2">
+                        <div>
+                            <h4>Authentication</h4>
+                            <ul class="feature-list">
+                                <li><strong>Firebase Auth:</strong> Google Sign-in, email verification</li>
+                                <li><strong>JWT Tokens:</strong> Secure session management</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4>AI & ML</h4>
+                            <ul class="feature-list">
+                                <li><strong>Google Gemini:</strong> Conversational AI, Realtime API</li>
+                                <li><strong>Hugging Face:</strong> Image generation (Flux.1-dev)</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4>Data & Information</h4>
+                            <ul class="feature-list">
+                                <li><strong>Google Custom Search:</strong> Real-time web search</li>
+                                <li><strong>OpenWeatherMap:</strong> Weather data</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4>Communication</h4>
+                            <ul class="feature-list">
+                                <li><strong>LiveKit:</strong> Real-time voice/video</li>
+                                <li><strong>Nodemailer:</strong> Email notifications</li>
+                                <li><strong>ImgBB:</strong> Image hosting</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="warning">
+                        <strong>⚠️ API Keys Required:</strong> Sabhi services ke liye API keys chahiye. Environment
+                        variables mein store karo (.env.local)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section id="architecture">
+            <h2><span class="emoji">🏗️</span> System Architecture | सिस्टम आर्किटेक्चर</h2>
+
+            <div class="card">
+                <h3>📐 How Everything Works Together</h3>
+
+                <div class="code-block">
+                    <pre>┌─────────────────────────────────────────────────────────────┐
+│                        USER INTERFACE                       │
+│  (Next.js Frontend - Browser/Mobile)                       │
+└─────────────────┬───────────────────────────────────────────┘
+                  │
+                  ├─── Firebase Auth (Login/Signup)
+                  │
+                  ├─── Supabase Client (Data Fetch)
+                  │
+                  └─── LiveKit Client (Voice/Video)
+                        │
+                        ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    BACKEND SERVICES                         │
+├─────────────────────────────────────────────────────────────┤
+│  1. Next.js API Routes                                      │
+│     - /api/token (LiveKit token generation)                 │
+│     - /api/send-email (Email notifications)                 │
+│                                                              │
+│  2. Python Agent (Jarvis)                                   │
+│     - LiveKit Agent SDK                                     │
+│     - Google Gemini Realtime API                            │
+│     - Tool Functions (Search, Weather, Image Gen)           │
+│                                                              │
+│  3. Supabase Functions                                      │
+│     - User Management                                       │
+│     - Credit System                                         │
+│     - Analytics Calculation                                 │
+└─────────────────┬───────────────────────────────────────────┘
+                  │
+                  ▼
+┌─────────────────────────────────────────────────────────────┐
+│                      DATABASE LAYER                         │
+│  (Supabase PostgreSQL)                                      │
+├─────────────────────────────────────────────────────────────┤
+│  - Users & Authentication                                   │
+│  - Chat History & Conversations                             │
+│  - Transactions & Payments                                  │
+│  - Rewards & Coupons                                        │
+│  - Activity Logs                                            │
+└─────────────────────────────────────────────────────────────┘</pre>
+                </div>
+
+                <h3>🔄 Request Flow Example: "Aaj ka weather bata"</h3>
+                <ol class="feature-list">
+                    <li><strong>User speaks:</strong> "Aaj ka weather bata"</li>
+                    <li><strong>LiveKit captures:</strong> Audio stream browser se backend tak</li>
+                    <li><strong>Gemini processes:</strong> Speech-to-text + Intent understanding</li>
+                    <li><strong>Tool execution:</strong> vyaas_get_weather() function calls OpenWeatherMap API</li>
+                    <li><strong>Response generation:</strong> Gemini creates natural Hinglish response</li>
+                    <li><strong>Voice synthesis:</strong> Text-to-speech with "Charon" voice</li>
+                    <li><strong>Delivery:</strong> Audio stream user ke browser tak</li>
+                    <li><strong>Logging:</strong> Conversation save in database + activity log</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <h3>💰 Credit System Flow</h3>
+
+                <div class="grid-2">
+                    <div>
+                        <h4>User Journey</h4>
+                        <ol class="feature-list">
+                            <li>User signs up → 100 free credits</li>
+                            <li>Daily login → Bonus credits (streak system)</li>
+                            <li>Use features → Credits deduct</li>
+                            <li>Low balance → Buy more (Pro/Ultra plans)</li>
+                            <li>Payment request → Admin approval</li>
+                            <li>Approved → Credits added + Transaction recorded</li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h4>Credit Costs</h4>
+                        <table>
+                            <tr>
+                                <th>Action</th>
+                                <th>Cost</th>
+                            </tr>
+                            <tr>
+                                <td>Chat Message</td>
+                                <td>2 credits</td>
+                            </tr>
+                            <tr>
+                                <td>Image Generation</td>
+                                <td>20 credits</td>
+                            </tr>
+                            <tr>
+                                <td>Code Mode</td>
+                                <td>20 credits</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Updates Section -->
+        <section id="updates">
+            <h2><span class="emoji">🆕</span> Version 2.2 Updates | अपडेट्स</h2>
+
+            <div class="card">
+                <h3>🎉 What's New in Version 2.2</h3>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>📊 Analytics Dashboard (NEW!)</h4>
+                        <ul class="feature-list">
+                            <li>Real-time revenue tracking</li>
+                            <li>Total/Monthly/Daily earnings display</li>
+                            <li>Transaction history table</li>
+                            <li>User-wise payment breakdown</li>
+                        </ul>
+                        <div class="highlight">
+                            <strong>Impact:</strong> Ab aap dekh sakte ho ki business kaise chal raha hai, kitna revenue
+                            aa raha hai, aur kon se users pay kar rahe hain.
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h4>🔒 Enhanced Security</h4>
+                        <ul class="feature-list">
+                            <li>Server-side timestamp for session validation</li>
+                            <li>Force logout feature for admins</li>
+                            <li>Session Guard component on all pages</li>
+                            <li>Multi-device logout support</li>
+                        </ul>
+                        <div class="highlight">
+                            <strong>Fix:</strong> Users ab apna device time change karke logout bypass nahi kar sakte.
+                            100% secure!
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h4>⚡ Admin Dashboard Improvements</h4>
+                        <ul class="feature-list">
+                            <li>Fixed price display bug (₹299 instead of ₹1000)</li>
+                            <li>Manual top-up tracking in analytics</li>
+                            <li>Activity logs for all users</li>
+                            <li>Bulk history deletion</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>🛠️ Technical Improvements</h4>
+                        <ul class="feature-list">
+                            <li>Transaction recording on payment approval</li>
+                            <li>Fixed ReferenceError in admin page</li>
+                            <li>Improved price calculation logic</li>
+                            <li>Better error handling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>📝 Complete Changelog</h3>
+
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Changes</th>
+                    </tr>
+                    <tr>
+                        <td>lib/subscription.ts</td>
+                        <td>Added recordTransaction() calls in approvePaymentRequest() and manualAddCredits()</td>
+                    </tr>
+                    <tr>
+                        <td>app/admin/page.tsx</td>
+                        <td>Fixed ReferenceError, improved price display with PLANS constant</td>
+                    </tr>
+                    <tr>
+                        <td>app/admin/analytics/page.tsx</td>
+                        <td>New page for Analytics Dashboard with revenue cards and transaction table</td>
+                    </tr>
+                    <tr>
+                        <td>lib/supabase.ts</td>
+                        <td>Added getAnalyticsSummary(), getRecentTransactions(), recordTransaction()</td>
+                    </tr>
+                    <tr>
+                        <td>components/app/session-guard.tsx</td>
+                        <td>Updated to pass lastSignInTime for robust session validation</td>
+                    </tr>
+                    <tr>
+                        <td>Database/ANALYTICS_SCHEMA.sql</td>
+                        <td>New transactions table with RLS policies</td>
+                    </tr>
+                    <tr>
+                        <td>Database/FIX_TIME_SYNC.sql</td>
+                        <td>Server-side timestamp default for invalidated_at column</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Installation Guide -->
+        <section id="installation">
+            <h2><span class="emoji">⚙️</span> Installation Guide | इंस्टॉलेशन गाइड</h2>
+
+            <div class="card">
+                <h3>🚀 Quick Start (5 Minutes)</h3>
+
+                <h4>Prerequisites</h4>
+                <div class="grid-3">
+                    <div class="card">
+                        <strong>Frontend</strong>
+                        <ul class="feature-list">
+                            <li>Node.js 18+</li>
+                            <li>pnpm</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <strong>Backend</strong>
+                        <ul class="feature-list">
+                            <li>Python 3.10+</li>
+                            <li>pip</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <strong>Database</strong>
+                        <ul class="feature-list">
+                            <li>Supabase Account</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4>Step 1: Database Setup</h4>
+                <div class="code-block">
+                    <pre>1. Supabase.com pe jao aur new project banao
+2. SQL Editor open karo
+3. Database/COMPLETE_DATABASE_SCHEMA.sql run karo
+4. Database/ANALYTICS_SCHEMA.sql run karo
+5. Database/FIX_TIME_SYNC.sql run karo</pre>
+                </div>
+
+                <h4>Step 2: Frontend Setup</h4>
+                <div class="code-block">
+                    <pre>cd Frontend
+pnpm install
+# Create .env.local file with your keys
+pnpm dev</pre>
+                </div>
+
+                <h4>Step 3: Backend Setup</h4>
+                <div class="code-block">
+                    <pre>cd Backend
+python -m venv venv
+venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+# Create .env file with API keys
+python agent.py</pre>
+                </div>
+
+                <div class="highlight">
+                    <strong>✅ Done!</strong> Frontend: http://localhost:3000 | Backend: Running in terminal
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Roadmap -->
+        <section id="roadmap">
+            <h2><span class="emoji">🗺️</span> Future Roadmap | भविष्य की योजना</h2>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🎯 Planned Features</h3>
+                    <ul class="feature-list">
+                        <li><strong>Automated Payments:</strong> Razorpay/Stripe integration</li>
+                        <li><strong>Mobile App:</strong> React Native version</li>
+                        <li><strong>Voice Cloning:</strong> Custom voice for each user</li>
+                        <li><strong>Multi-language:</strong> Pure Hindi, Tamil, Telugu support</li>
+                        <li><strong>AI Avatars:</strong> Visual representation of Vyaas</li>
+                        <li><strong>Team Collaboration:</strong> Multiple users in one account</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🔧 Technical Improvements</h3>
+                    <ul class="feature-list">
+                        <li><strong>Caching:</strong> Redis for faster responses</li>
+                        <li><strong>CDN:</strong> Cloudflare for global delivery</li>
+                        <li><strong>Monitoring:</strong> Sentry for error tracking</li>
+                        <li><strong>Testing:</strong> Jest + Playwright for automated tests</li>
+                        <li><strong>CI/CD:</strong> GitHub Actions for deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.5rem; margin-bottom: 20px;">🚀 VYAAS AI</p>
+            <p>Built with ❤️ by Maheshwar | भारत में बना</p>
+            <p style="margin-top: 20px;">© 2025 VYAAS AI. All rights reserved.</p>
+            <p style="margin-top: 10px; color: #64748b;">Version 2.2 - Complete System Update</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" onclick="scrollToTop()">
+        ↑
+    </div>
+
+    <script>
+        // Tab Switching
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+
+        // Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/Hide Scroll to Top Button
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

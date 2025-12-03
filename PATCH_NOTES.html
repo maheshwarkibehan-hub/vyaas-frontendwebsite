@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VYAAS AI - Version 2.3 Update</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border-radius: 20px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .version-badge {
+            display: inline-block;
+            padding: 10px 30px;
+            background: rgba(139, 92, 246, 0.2);
+            border: 2px solid #8b5cf6;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .date {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #8b5cf6;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: #60a5fa;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 15px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1rem;
+            color: #cbd5e1;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border-left: 4px solid #10b981;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .emoji {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+            color: #94a3b8;
+        }
+
+        code {
+            background: rgba(139, 92, 246, 0.2);
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #a78bfa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 VYAAS AI</h1>
+            <div class="version-badge">Version 2.3 - PWA & Mobile Update</div>
+            <div class="date">November 24, 2025</div>
+        </header>
+
+        <section class="section">
+            <h2><span class="emoji">✨</span> What's New in v2.3</h2>
+
+            <div class="feature-card">
+                <h3><span class="emoji">📱</span> Progressive Web App (PWA)</h3>
+                <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 20px;">
+                    VYAAS AI is now installable as a native app on your phone and desktop!
+                </p>
+
+                <ul class="feature-list">
+                    <li><strong>Install on Home Screen:</strong> Add VYAAS AI to your phone like a native app</li>
+                    <li><strong>Offline Support:</strong> Works even without internet connection</li>
+                    <li><strong>Service Worker:</strong> Fast loading with intelligent caching</li>
+                    <li><strong>App Icons:</strong> Beautiful purple gradient icons (8 sizes)</li>
+                    <li><strong>Splash Screen:</strong> Professional loading experience</li>
+                    <li><strong>Full Screen Mode:</strong> No browser UI when installed</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>🎯 How to Install:</strong> Open VYAAS AI in Chrome/Safari on your phone, look for "Add to
+                    Home Screen" or install prompt, and enjoy native app experience!
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="emoji">📐</span> Mobile-First Responsive Design</h3>
+                <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 20px;">
+                    Complete UI overhaul for perfect mobile experience.
+                </p>
+
+                <ul class="feature-list">
+                    <li><strong>Responsive Header:</strong> Logo and buttons adapt to screen size (64px mobile → 80px
+                        desktop)</li>
+                    <li><strong>Compact Control Bar:</strong> Smaller buttons on mobile (40px → 48px desktop)</li>
+                    <li><strong>Adaptive Typography:</strong> Text sizes scale based on device (text-base → text-lg)
+                    </li>
+                    <li><strong>Icon-Only Buttons:</strong> History & Inbox show only icons on small screens</li>
+                    <li><strong>Flexible Layouts:</strong> Buttons wrap and stack properly on mobile</li>
+                    <li><strong>Touch-Friendly:</strong> All interactive elements minimum 40px for easy tapping</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>💡 Pro Tip:</strong> All UI elements now use responsive Tailwind classes (sm:, md:, lg:) for
+                    perfect scaling across devices!
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="emoji">🎨</span> Enhanced User Menu</h3>
+                <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 20px;">
+                    Cleaner navigation with improved mobile experience.
+                </p>
+
+                <ul class="feature-list">
+                    <li><strong>Consolidated Menu:</strong> History and Inbox moved to user dropdown</li>
+                    <li><strong>Notification Badge:</strong> Unread count displayed in menu</li>
+                    <li><strong>Quick Actions:</strong> One-click access to History, Inbox, Theme, Logout</li>
+                    <li><strong>Space Efficient:</strong> More screen space for content on mobile</li>
+                    <li><strong>Beautiful Animations:</strong> Smooth transitions and hover effects</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>🎯 Key Benefit:</strong> Cleaner header on mobile with all features accessible from profile
+                    menu!
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="emoji">🔧</span> Bug Fixes & Improvements</h3>
+                <ul class="feature-list">
+                    <li><strong>TypeScript Errors:</strong> Fixed all @typescript-eslint/no-explicit-any errors</li>
+                    <li><strong>ESLint Warnings:</strong> Resolved unused variables and imports</li>
+                    <li><strong>React Warnings:</strong> Fixed unescaped entities in JSX</li>
+                    <li><strong>Firebase Types:</strong> Proper User type from firebase/auth</li>
+                    <li><strong>PWA Events:</strong> Custom BeforeInstallPromptEvent interface</li>
+                    <li><strong>Build Optimization:</strong> Clean production builds</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><span class="emoji">📊</span> Previous Updates (v2.2)</h2>
+
+            <div class="feature-card">
+                <h3>Analytics & Earnings Dashboard</h3>
+                <ul class="feature-list">
+                    <li>Real-Time Revenue Tracking (Total, Monthly, Daily)</li>
+                    <li>Transaction History with user details</li>
+                    <li>Visual insights with glassmorphism design</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>Enhanced Admin Dashboard</h3>
+                <ul class="feature-list">
+                    <li>Fixed Ultra plan price display (₹299)</li>
+                    <li>Manual top-up tracking in revenue</li>
+                    <li>Force logout across all devices</li>
+                    <li>Activity logs with timestamps</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>Robust Session Security</h3>
+                <ul class="feature-list">
+                    <li>Server-side time synchronization</li>
+                    <li>Global Session Guard component</li>
+                    <li>Instant enforcement for banned users</li>
+                    <li>Multi-device logout support</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><span class="emoji">🛠️</span> Technical Stack</h2>
+
+            <div class="feature-card">
+                <h3>Frontend</h3>
+                <ul class="feature-list">
+                    <li><code>Next.js 15.5.2</code> with Turbopack</li>
+                    <li><code>React 19.2.0</code> with Server Components</li>
+                    <li><code>next-pwa 5.6.0</code> for PWA support</li>
+                    <li><code>Framer Motion</code> for animations</li>
+                    <li><code>Tailwind CSS</code> with responsive utilities</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>Backend</h3>
+                <ul class="feature-list">
+                    <li>Python AI Agent (Jarvis)</li>
+                    <li>LiveKit for real-time communication</li>
+                    <li>Google Gemini AI integration</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>Database</h3>
+                <ul class="feature-list">
+                    <li>Supabase PostgreSQL</li>
+                    <li>Row Level Security (RLS)</li>
+                    <li>Real-time subscriptions</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><span class="emoji">📝</span> Files Modified in v2.3</h2>
+
+            <div class="feature-card">
+                <ul class="feature-list">
+                    <li><code>next.config.js</code> - PWA configuration with next-pwa</li>
+                    <li><code>app/layout.tsx</code> - PWA meta tags and manifest link</li>
+                    <li><code>public/manifest.json</code> - PWA manifest configuration</li>
+                    <li><code>public/sw.js</code> - Service Worker for offline support</li>
+                    <li><code>public/icons/</code> - 8 app icons (72px to 512px)</li>
+                    <li><code>components/app/user-menu.tsx</code> - Added History & Inbox</li>
+                    <li><code>components/app/app.tsx</code> - Responsive header</li>
+                    <li><code>components/livekit/agent-control-bar.tsx</code> - Mobile responsive controls</li>
+                    <li><code>components/app/welcome-view.tsx</code> - Responsive hero & buttons</li>
+                    <li><code>components/pwa/install-prompt.tsx</code> - PWA install prompt</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p style="font-size: 1.2rem; margin-bottom: 15px;">Built with ❤️ by Maheshwar</p>
+            <p>© 2025 VYAAS AI. All rights reserved.</p>
+            <p style="margin-top: 20px; color: #64748b;">Version 2.3 - PWA & Mobile Update</p>
+        </footer>
+    </div>
+</body>
+
+</html>
