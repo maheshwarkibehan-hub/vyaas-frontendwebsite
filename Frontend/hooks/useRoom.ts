@@ -91,7 +91,9 @@ export function useRoom(appConfig: AppConfig) {
         tokenSource
           .fetch({ agentName: appConfig.agentName })
           .then((connectionDetails) =>
-            room.connect(connectionDetails.serverUrl, connectionDetails.participantToken)
+            room.connect(connectionDetails.serverUrl, connectionDetails.participantToken, {
+              autoSubscribe: true,
+            })
           ),
       ]).catch((error) => {
         if (aborted.current) {

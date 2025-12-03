@@ -42,6 +42,10 @@ async def entrypoint(ctx: agents.JobContext):
             noise_cancellation=noise_cancellation.BVC()
         ),
     )
+
+    # Wait for 2 seconds to allow Android audio to initialize
+    await asyncio.sleep(2)
+
     await session.generate_reply(
         instructions=Reply_prompts
     )
