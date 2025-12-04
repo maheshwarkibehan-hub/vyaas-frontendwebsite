@@ -62,7 +62,7 @@ export const SessionView = ({
 
   const messages = useChatMessages();
   const [chatOpen, setChatOpen] = useState(true);
-  const { isMobile, isTablet, isLandscape } = useResponsive();
+  const { isMobile, isTablet, isLandscape, isLargeTablet } = useResponsive();
 
   // Subscription State
   const [credits, setCredits] = useState(0);
@@ -203,14 +203,14 @@ export const SessionView = ({
             >
               <ScrollArea className={cn(
                 "pt-16",
-                isMobile ? "px-3 pb-[180px]" : isTablet ? "px-5 pb-[220px]" : "px-6 pb-[250px]"
+                isMobile ? "px-3 pb-[180px]" : isLargeTablet ? "px-10 pb-[280px]" : isTablet ? "px-5 pb-[220px]" : "px-6 pb-[250px]"
               )}>
                 <ChatTranscript
                   hidden={false}
                   messages={messages}
                   className={cn(
                     "mx-auto space-y-3",
-                    isMobile ? "max-w-full" : isTablet ? "max-w-3xl" : "max-w-4xl",
+                    isMobile ? "max-w-full" : isLargeTablet ? "max-w-6xl" : isTablet ? "max-w-3xl" : "max-w-4xl",
                     !chatOpen && "pointer-events-none"
                   )}
                 />
@@ -221,14 +221,14 @@ export const SessionView = ({
           {/* Control Bar */}
           <div className={cn(
             "fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-black/10 backdrop-blur-md safe-bottom",
-            isMobile ? "p-2" : "p-4"
+            isMobile ? "p-2" : isLargeTablet ? "p-6" : "p-4"
           )}>
             {appConfig.isPreConnectBufferEnabled && (
               <PreConnectMessage messages={messages} className="pb-4" />
             )}
             <div className={cn(
               "mx-auto",
-              isMobile ? "max-w-full" : isTablet ? "max-w-3xl" : "max-w-4xl"
+              isMobile ? "max-w-full" : isLargeTablet ? "max-w-6xl" : isTablet ? "max-w-3xl" : "max-w-4xl"
             )}>
               <Fade bottom className="absolute inset-x-0 top-0 h-4 -translate-y-full" />
               <AgentControlBar
