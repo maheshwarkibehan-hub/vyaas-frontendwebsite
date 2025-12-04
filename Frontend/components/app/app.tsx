@@ -274,12 +274,12 @@ function AppContent() {
                     <TokenBalance count={codeTokens} icon={Terminal} label="Code Tokens" color="green" />
 
                     {user?.email === 'maheshwarkibehan@gmail.com' && (
-                      <a
-                        href="/admin"
-                        className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 rounded-full transition-all duration-200"
+                      <button
+                        onClick={() => window.location.href = '/admin'}
+                        className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 rounded-full transition-all duration-200 cursor-pointer"
                       >
                         Dashboard
-                      </a>
+                      </button>
                     )}
 
                     <UserMenu
