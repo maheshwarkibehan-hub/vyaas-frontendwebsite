@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 import localFont from 'next/font/local';
 import { SessionGuard } from '@/components/app/session-guard';
@@ -7,6 +8,17 @@ import { cn, getAppConfig, getStyles } from '@/lib/utils';
 import '@/styles/globals.css';
 import './light-theme.css';
 import './safe-area.css';
+
+export const metadata: Metadata = {
+  title: 'VYAAS AI - Your Intelligent AI Assistant',
+  description: 'Experience the future of AI interaction with voice, chat, and image generation - all in one powerful platform',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
+};
 
 const outfit = Outfit({
   variable: '--font-outfit',
@@ -76,6 +88,25 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       </head>
       <body className="overflow-x-hidden">
+        <script dangerouslySetInnerHTML={{
+          __html: `
+          (function() {
+            function adjustZoom() {
+              var isPortrait = window.innerHeight > window.innerWidth;
+              var viewport = document.querySelector('meta[name="viewport"]');
+              if (viewport) {
+                if (isPortrait) {
+                  viewport.setAttribute('content', 'width=device-width, initial-scale=0.65, maximum-scale=5, user-scalable=yes');
+                } else {
+                  viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes');
+                }
+              }
+            }
+            adjustZoom();
+            window.addEventListener('resize', adjustZoom);
+            window.addEventListener('orientationchange', adjustZoom);
+          })();
+        `}} />
         <SessionGuard />
         <BroadcastListener />
         {children}
