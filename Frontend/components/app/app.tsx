@@ -257,15 +257,21 @@ function AppContent() {
                       )}
                     </button>
 
-                    <a href="/events" className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-pink-400 hover:bg-pink-500/10 rounded-full transition-all">
+                    <button
+                      onClick={() => window.location.href = '/events'}
+                      className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-pink-400 hover:bg-pink-500/10 rounded-full transition-all cursor-pointer"
+                    >
                       <Gift className="w-5 h-5" />
                       <span>Events</span>
-                    </a>
+                    </button>
 
-                    <a href="/patches" className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                    <button
+                      onClick={() => window.location.href = '/patches'}
+                      className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all cursor-pointer"
+                    >
                       <FileText className="w-5 h-5" />
                       <span>Patches</span>
-                    </a>
+                    </button>
 
                     <div className="h-6 w-px bg-white/10 mx-1"></div>
 
