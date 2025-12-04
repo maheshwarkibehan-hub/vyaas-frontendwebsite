@@ -6,6 +6,7 @@ import { ApplyThemeScript, ThemeToggle } from '@/components/app/theme-toggle';
 import { cn, getAppConfig, getStyles } from '@/lib/utils';
 import '@/styles/globals.css';
 import './light-theme.css';
+import './safe-area.css';
 
 const outfit = Outfit({
   variable: '--font-outfit',

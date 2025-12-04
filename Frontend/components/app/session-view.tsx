@@ -220,7 +220,7 @@ export const SessionView = ({
 
           {/* Control Bar */}
           <div className={cn(
-            "fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-black/10 backdrop-blur-md",
+            "fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-black/10 backdrop-blur-md safe-bottom",
             isMobile ? "p-2" : "p-4"
           )}>
             {appConfig.isPreConnectBufferEnabled && (
