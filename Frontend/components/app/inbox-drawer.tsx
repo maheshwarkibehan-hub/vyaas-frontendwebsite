@@ -262,7 +262,7 @@ export const InboxDrawer = ({ isOpen, onClose, userId, onNotificationChange }: I
                                     initial={{ opacity: 0, scale: 0.9, y: 20 }}
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                                    className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl bg-[#0a0a0f] border border-white/20 rounded-2xl shadow-2xl z-[90] max-h-[80vh] overflow-hidden"
+                                    className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] md:w-full max-w-2xl bg-[#0a0a0f] border border-white/20 rounded-2xl shadow-2xl z-[90] max-h-[80vh] overflow-hidden m-4"
                                 >
                                     {/* Header */}
                                     <div className="p-6 border-b border-white/10 bg-gradient-to-r from-purple-500/10 to-pink-500/10">

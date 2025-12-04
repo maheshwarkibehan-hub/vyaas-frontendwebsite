@@ -236,8 +236,8 @@ function AppContent() {
             <div className="flex items-center gap-2 md:gap-4">
               {isAuthenticated ? (
                 <>
-                  {/* Desktop Navigation */}
-                  <div className="hidden md:flex items-center gap-3">
+                  {/* Desktop Navigation - Scrollable */}
+                  <div className="hidden md:flex items-center gap-2 overflow-x-auto scrollbar-hide max-w-[calc(100vw-400px)]" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                     <button
                       onClick={() => setIsHistoryOpen(true)}
                       className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all"
