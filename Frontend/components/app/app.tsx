@@ -10,6 +10,7 @@ import { AuthUIProvider, useAuthUI } from '@/components/app/auth-ui-provider';
 import { AuthModal } from '@/components/app/auth-modal';
 import { auth } from '@/lib/firebase';
 import type { User } from 'firebase/auth';
+import { useRouter } from 'next/navigation';
 
 import { HistoryDrawer } from '@/components/app/history-drawer';
 import { InboxDrawer } from '@/components/app/inbox-drawer';
@@ -43,6 +44,7 @@ export function App({ appConfig }: AppProps) {
 
 function AppContent() {
   const { isAuthModalOpen, openAuthModal, closeAuthModal } = useAuthUI();
+  const router = useRouter();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState<User | null>(null);
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
@@ -258,7 +260,7 @@ function AppContent() {
                     </button>
 
                     <button
-                      onClick={() => window.location.href = '/events'}
+                      onClick={() => router.push('/events')}
                       className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-pink-400 hover:bg-pink-500/10 rounded-full transition-all cursor-pointer"
                     >
                       <Gift className="w-5 h-5" />
@@ -266,7 +268,7 @@ function AppContent() {
                     </button>
 
                     <button
-                      onClick={() => window.location.href = '/patches'}
+                      onClick={() => router.push('/patches')}
                       className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all cursor-pointer"
                     >
                       <FileText className="w-5 h-5" />
@@ -281,7 +283,7 @@ function AppContent() {
 
                     {user?.email === 'maheshwarkibehan@gmail.com' && (
                       <button
-                        onClick={() => window.location.href = '/admin'}
+                        onClick={() => router.push('/admin')}
                         className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 rounded-full transition-all duration-200 cursor-pointer"
                       >
                         Dashboard

@@ -24,6 +24,7 @@ import { PricingModal } from '@/components/app/pricing-modal';
 import { CreditBalance } from '@/components/app/credit-balance';
 import { toast } from 'sonner';
 import { useRoomContext } from '@livekit/components-react';
+import { useRouter } from 'next/navigation';
 
 const MotionBottom = motion.create('div');
 
@@ -58,6 +59,7 @@ export const SessionView = ({
   useConnectionTimeout(200_000);
   useDebugMode({ enabled: IN_DEVELOPMENT });
 
+  const router = useRouter();
   const messages = useChatMessages();
   const [chatOpen, setChatOpen] = useState(true);
   const { isMobile, isTablet, isLandscape } = useResponsive();
@@ -240,8 +242,8 @@ export const SessionView = ({
                     }
                   }
                 }}
-                onWebsiteClick={() => handleAction(COSTS.IMAGE_GEN, () => window.location.href = '/image-gen', 'Image Generation', 'image')}
-                onCodeClick={() => handleAction(COSTS.CODE_MODE, () => window.location.href = '/code-mode', 'Code Mode', 'code')}
+                onWebsiteClick={() => handleAction(COSTS.IMAGE_GEN, () => router.push('/image-gen'), 'Image Generation', 'image')}
+                onCodeClick={() => handleAction(COSTS.CODE_MODE, () => router.push('/code-mode'), 'Code Mode', 'code')}
                 onDisconnect={() => {
                   if (auth.currentUser && messages.length > 0) {
                     const formattedMessages = messages.map(msg => ({
