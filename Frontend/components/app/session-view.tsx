@@ -240,8 +240,8 @@ export const SessionView = ({
                     }
                   }
                 }}
-                onWebsiteClick={() => handleAction(COSTS.IMAGE_GEN, () => window.open("https://vyaasai.lovable.app/", "_blank"), 'Image Generation', 'image')}
-                onCodeClick={() => handleAction(COSTS.CODE_MODE, () => window.open("https://vyaas-code.lovable.app/", "_blank"), 'Code Mode', 'code')}
+                onWebsiteClick={() => handleAction(COSTS.IMAGE_GEN, () => window.location.href = '/image-gen', 'Image Generation', 'image')}
+                onCodeClick={() => handleAction(COSTS.CODE_MODE, () => window.location.href = '/code-mode', 'Code Mode', 'code')}
                 onDisconnect={() => {
                   if (auth.currentUser && messages.length > 0) {
                     const formattedMessages = messages.map(msg => ({
